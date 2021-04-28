@@ -186,7 +186,7 @@ while x:
         x=False
 
 df=pd.DataFrame(data, columns=column_list)
-engine=create_engine('postgresql://postgres:Tennis!12@localhost:5432/postgres')
+engine=create_engine('postgresql://postgres:---------@localhost:5432/postgres')
 con=engine.connect()
 table_name=job+location+salary
 #df.to_sql(table_name,con,if_exists='append',index=True)
