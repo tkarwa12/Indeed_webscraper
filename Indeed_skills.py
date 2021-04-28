@@ -178,7 +178,7 @@ while x:
         job_cards, soup_ob=job_cards_all(url_next_page)
         job_headlines(job_cards)
         url_next_page_split=url_next_page.split('=')
-        if '10' in url_next_page_split: #stops the program at 21 pages----------------------------------------------------------------------
+        if '200' in url_next_page_split: #stops the program at 21 pages----------------------------------------------------------------------
             x=False
             break
     except:
