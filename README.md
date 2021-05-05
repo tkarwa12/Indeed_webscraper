@@ -1,2 +1,2 @@
-# Indeed_webscraper
-Scrapes Indeed.com for job posts based on user specification. 
+# Indeed Web Scraper
+Scrapes Indeed.com for job posts based on user specification. Takes in input such as desired job title, location (if any), minimum salary (if any), and any skills that you have or are looking for in a job. The program scrapes all the job postings related to your inputs and outputs a bar graph detailing what percent of jobs mention those skills. Additionally for eahc job that the program scrapes it captures the company name, job title, location, salary (if included), the link to the job post, and whether or not the job mentions the skills you are looking for. Lastly the program uploads all the informaiton to a postgres database.
