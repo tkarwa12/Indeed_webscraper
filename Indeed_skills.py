@@ -31,7 +31,7 @@ x=True
 y=True
 data=[]
 dict_skills={}
-column_list=['company', 'location', 'title', 'salary_range', 'Minimum_salary', 'Maximum_salary', 'link']
+column_list=['company', 'title', 'location', 'salary_range', 'Minimum_salary', 'Maximum_salary', 'link']
 exist=1
 noexist=0
 skills=[]
@@ -197,7 +197,7 @@ while x:
         x=False
 #upload the job postings to a PostgreSQL database
 df=pd.DataFrame(data, columns=column_list)
-engine=create_engine('postgresql://postgres:------@localhost:5432/postgres')
+engine=create_engine('postgresql://postgres:Tennis!12@localhost:5432/postgres')
 con=engine.connect()
 table_name=job+location+salary
 #df.to_sql(table_name,con,if_exists='append',index=True)
@@ -213,7 +213,7 @@ dict_skills_keys_sorted=sorted(dict_skills, key=dict_skills.get, reverse=True)
 for key in dict_skills_keys_sorted:
     dict_skills_sorted[key] = dict_skills[key]    
 print(dict_skills_sorted)   
-#df.to_csv('job_listings.csv', index=True)
+df.to_csv('job_listings.csv', index=True)
 names=list(dict_skills_sorted.keys())
 values=list(dict_skills_sorted.values())
 #df2=pd.DataFrame(list(dict_skills.items()),columns=skills).sort_values(values)
